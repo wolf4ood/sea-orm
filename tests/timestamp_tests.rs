@@ -12,16 +12,9 @@ async fn main() -> Result<(), DbErr> {
     let ctx = TestContext::new("bakery_chain_schema_timestamp_tests").await;
     create_tables(&ctx.db).await?;
     create_applog(&ctx.db).await?;
+    create_satellites_log(&ctx.db).await?;
 
     ctx.delete().await;
-
-    {
-        let ctx = TestContext::new("bakery_chain_schema_timestamp_tests").await;
-        create_tables(&ctx.db).await?;
-        create_satellites_log(&ctx.db).await?;
-
-        ctx.delete().await;
-    }
 
     Ok(())
 }
