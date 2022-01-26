@@ -220,13 +220,13 @@ pub async fn create_satellites_table(db: &DbConn) -> Result<ExecResult, DbErr> {
         )
         .col(
             ColumnDef::new(datetimeutc::Column::LaunchDate)
-                .timestamp()
+                .timestamp_with_time_zone()
                 .not_null()
                 .default("2022-01-26 16:24:00"),
         )
         .col(
             ColumnDef::new(datetimeutc::Column::DeploymentDate)
-                .timestamp()
+                .timestamp_with_time_zone()
                 .not_null()
                 .default("2022-01-26 16:24:00"),
         )
