@@ -274,7 +274,6 @@ try_getable_date_time!(chrono::DateTime<chrono::FixedOffset>);
 #[cfg(feature = "with-chrono")]
 try_getable_date_time!(chrono::DateTime<chrono::Utc>);
 
-
 #[cfg(feature = "with-rust_decimal")]
 use rust_decimal::Decimal;
 
