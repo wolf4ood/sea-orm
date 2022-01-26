@@ -72,6 +72,10 @@ pub type DateTimeWithTimeZone = chrono::DateTime<chrono::FixedOffset>;
 #[cfg(feature = "with-chrono")]
 pub type DateTimeUtc = chrono::DateTime<chrono::Utc>;
 
+/// Date time with local time zone
+#[cfg(feature = "with-chrono")]
+pub type DateTimeLocal = chrono::DateTime<chrono::Local>;
+
 #[cfg(feature = "with-rust_decimal")]
 pub use rust_decimal::Decimal;
 
