@@ -337,7 +337,7 @@ impl ColumnDef {
         self
     }
 
-    /// Set the `indexed` field  to `true`
+    /// Set the default value
     pub fn default_value<T>(mut self, value: T) -> Self
     where
         T: Into<Value>,
